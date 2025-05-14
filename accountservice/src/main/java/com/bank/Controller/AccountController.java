@@ -20,10 +20,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
     
-    @GetMapping("/ping")
-    public String ping() {
-        return "AccountController is alive";
-    }
 
     // Create a new account
     @PostMapping("/create")
@@ -33,7 +29,7 @@ public class AccountController {
     }
 
     // Get all accounts
-    @GetMapping
+    @GetMapping("/viewall")
     public List<Account> getAllAccounts() {
         return accountService.getAllAccounts();
     }
